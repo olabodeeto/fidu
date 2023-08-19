@@ -1,113 +1,120 @@
-import Image from 'next/image'
+"use client";
+import Image from "next/image";
+import Header from "./shared/components/header";
+import { Radio } from "@mui/material";
+import FeatureCard from "./shared/components/home-feature-card";
 
 export default function Home() {
+  const featutes = [
+    {
+      id: 1,
+      title: "Secured Ecosystem",
+      description:
+        "With FIDU, a safer and secured ecosystem has been set in place for all of your transaction.",
+      icon: "/icons/secure.svg",
+    },
+    {
+      id: 2,
+      title: "Integrated Widgets",
+      description:
+        "With our integrated widgets built for you, checkouts and payments can be be more faster, and safer",
+      icon: "/icons/dash.svg",
+    },
+
+    {
+      id: 3,
+      title: "Secured Ecosystem",
+      description:
+        "With FIDU, a safer and secured ecosystem has been set in place for all of your transaction",
+      icon: "/icons/secure.svg",
+    },
+  ];
+
+  const featureList = featutes.map((obj, index: number) => (
+    <FeatureCard
+      key={index}
+      icon={obj.icon}
+      title={obj?.title}
+      description={obj?.description}
+      id={obj?.id}
+    />
+  ));
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <main className="">
+      <Header />
+      <div className="w-full herobg min-h-[100vh] lg:min-h-[94vh] mt-10 lg:mt-16 lg:pt-14 xl:pt-20">
+        <div className="w-full flex flex-col lg:flex-row lg:w-11/12 m-auto mt-4 xl:mt-4 relative lg:px-2 xl:px-4 min-h-40 text-white">
+          <div className="w-full mb-20 lg:mb-0 lg:w-7/12 px-4 md:px-10 mt-24 md:mt-32 lg:px-2 lg:mt-0">
+            <h1 className="text-[2.6rem] leading-[2.88rem] md:text-5xl md:leading-[4rem] lg:text-[2.8rem] xl:text-[4rem] lg:leading-[3.4rem] xl:leading-[4.36rem] font-bold lg:mt-20">
+              Fostering trust, one transaction at a time
+            </h1>
+            <p className="font-light text-lg lg:text-base xl:text-xl mt-2">
+              Secured online payment for every purchase
+            </p>
+
+            <div className="md:w-8/12 lg:w-10/12 text-base xl:w-9/12 flex items-center gap-x-3 mt-16 font-light lg:text-base xl:text-xl ">
+              <Radio
+                checked={false}
+                onChange={() => ""}
+                value="a"
+                name="radio-buttons"
+                inputProps={{ "aria-label": "A" }}
+                sx={{
+                  color: "#ffffff",
+                  "&.Mui-checked": {
+                    color: "#5e13ce",
+                  },
+                }}
+              />
+              <p>
+                Send updates to my email regards product releases, features and
+                services
+              </p>
+            </div>
+            <div className="mt-4 lg:mt-10 w-full md:w-8/12 lg:w-10/12 p-2 rounded-full flex flex-col gap-y-4 md:flex-row items-start lg:justify-between lg:items-center gap-x-2 md:bg-white text-fidu_textColor">
+              <input
+                type="email"
+                className="w-11/12 py-4 md:w-10/12 bg-white md:py-2 rounded-full outline-none pl-5"
+                placeholder="Enter emaill address"
+              />
+              <button className="py-4 md:py-3 px-6 w-6/12 md:w-5/12 lg:w-5/12 xl:w-4/12 bg-fidu_primary text-white rounded-full font-semibold lg:text-sm xl:text-lg xl:px-4">
+                Join waitlist
+              </button>
+            </div>
+          </div>
+          {/* ==mockup=== */}
+          <div className="w-full px-6 lg:px-0 lg:w-5/12 flex md:justify-center lg:justify-end pb-20">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/images/mockup.svg"
+              width={140}
+              height={140}
+              alt="Picture of the author"
+              className="w-[34rem] md:w-[28rem] lg:w-[34rem]"
             />
-          </a>
+          </div>
+          {/* ===== */}
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      {/* ============ */}
+      <section className="mt-20 m-auto w-11/12 px-2 lg:px-4 mb-20">
+        <div className="text-center">
+          <h2 className="text-[2.85rem] leading-[2.94rem] lg:leading-none lg:text-5xl xl:text-6xl mb-4 font-[700] text-fidu_headingColor">
+            More than just payments
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+          <p className="w-11/12 lg:w-8/12  xl:w-7/12 m-auto text-[1.158rem] lg:text-xl  xl:text-2xl font-light text-slate-600">
+            With FIDU, we are committed to bridging the gap between merchants
+            and sellers, fostering trust and safe environment
           </p>
-        </a>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <div className="mt-14">
+          <div className="w-full flex flex-col md:flex-row gap-x-10 justify-between">
+            {featureList}
+          </div>
+        </div>
+      </section>
+      {/* ============== */}
     </main>
-  )
+  );
 }

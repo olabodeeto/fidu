@@ -127,7 +127,7 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row w-full relative bg-fidu_primary">
                 <div className="w-full py-20 md:py-10 lg:py-0 lg:h-none lg:w-[40%] flex justify-center items-center rounded-bl-xl md:rounded-bl-none rounded-br-xl md:rounded-br-none  bg-fidu_lightPurple relative lg:rounded-tr-[1rem]">
                   <h2 className="text-[5rem] md:text-[6.5rem] text-fidu_primary font-bold">
-                    FAQ's
+                    FAQ&apos;s
                   </h2>
                 </div>
                 <div className="w-full p-5 lg:w-7/12 bg-fidu_primary md:p-10">

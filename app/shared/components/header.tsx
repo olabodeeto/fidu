@@ -30,7 +30,7 @@ export default function Header() {
                 <Link href="/contact">Contact us</Link>
               </li>
               <li>
-                <Link href="/about">FAQ's</Link>
+                <Link href="/about">FAQ&apos;s</Link>
               </li>
             </ul>
           </div>
@@ -67,7 +67,7 @@ export default function Header() {
                 <Link href="/contact">Contact us</Link>
               </li>
               <li>
-                <Link href="/about">FAQ's</Link>
+                <Link href="/about">FAQ&apos;s</Link>
               </li>
             </ul>
           </div>

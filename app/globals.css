@@ -34,3 +34,20 @@ body {
 .headerTransition {
   transition: all ease-in-out 0.8s;
 }
+
+.minHeight-40 {
+  min-height: 40vh;
+}
+
+.minHeight-60 {
+  min-height: 60vh;
+}
+
+.minHeight-20 {
+  min-height: 20vh;
+}
+
+.MuiAccordionSummary-root {
+  flex-direction: row-reverse !important;
+  flex-direction: row !important;
+}

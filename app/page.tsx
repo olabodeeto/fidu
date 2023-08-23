@@ -4,8 +4,12 @@ import Header from "./shared/components/header";
 import { Radio } from "@mui/material";
 import FeatureCard from "./shared/components/home-feature-card";
 import FaqComponent from "./shared/components/faq-component";
+import Fiducheckbox from "./shared/components/Fiducheckbox/fidu-checkbox";
+import { useState } from "react";
 
 export default function Home() {
+  const [isChecked, setisChecked] = useState(false);
+
   const featutes = [
     {
       id: 1,
@@ -55,8 +59,8 @@ export default function Home() {
               </p>
 
               <div className="md:w-8/12 lg:w-10/12 text-base xl:w-9/12 flex items-center gap-x-3 mt-16 font-light lg:text-base xl:text-xl ">
-                <Radio
-                  checked={false}
+                {/* <Radio
+                  checked={true}
                   onChange={() => ""}
                   value="a"
                   name="radio-buttons"
@@ -64,16 +68,20 @@ export default function Home() {
                   sx={{
                     color: "#ffffff",
                     "&.Mui-checked": {
-                      color: "#5e13ce",
+                      color: "#ccbde1",
                     },
                   }}
+                /> */}
+                <Fiducheckbox
+                  isChecked={isChecked}
+                  setisChecked={setisChecked}
                 />
                 <p>
                   Send updates to my email regards product releases, features
                   and services
                 </p>
               </div>
-              <div className="mt-4 lg:mt-10 w-full md:w-8/12 lg:w-10/12 p-2 rounded-full flex flex-col gap-y-4 md:flex-row items-start lg:justify-between lg:items-center gap-x-2 md:bg-white text-fidu_textColor">
+              <div className="mt-4 lg:mt-10 w-full md:w-8/12 lg:w-10/12 p-2 rounded-full flex flex-col gap-y-4 md:flex-row items-start lg:justify-between lg:items-center gap-x-2 md:bg-white text-fidu_textColor lg:focus-within:outline-none lg:focus-within:ring-4 focus-with:ring-offset-1 focus-within:ring-primary lg:ring-fidu_primary">
                 <input
                   type="email"
                   className="w-11/12 py-4 md:w-10/12 bg-white md:py-2 rounded-full outline-none pl-5"

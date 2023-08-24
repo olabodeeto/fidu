@@ -87,7 +87,7 @@ export default function Home() {
                   className="w-11/12 py-4 md:w-10/12 bg-white md:py-2 rounded-full outline-none pl-5"
                   placeholder="Enter emaill address"
                 />
-                <button className="py-4 md:py-3 px-6 w-6/12 md:w-5/12 lg:w-5/12 xl:w-4/12 bg-fidu_primary text-white rounded-full font-semibold lg:text-sm xl:text-lg xl:px-4">
+                <button className="py-4 md:py-3 px-6 w-6/12 md:w-5/12 lg:w-5/12 xl:w-4/12 lg:bg-fidu_primary bg-fidu_black text-white rounded-full font-semibold lg:text-sm xl:text-lg xl:px-4">
                   Join waitlist
                 </button>
               </div>

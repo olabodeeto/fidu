@@ -5,7 +5,9 @@ import { Radio } from "@mui/material";
 import FeatureCard from "./shared/components/home-feature-card";
 import FaqComponent from "./shared/components/faq-component";
 import Fiducheckbox from "./shared/components/Fiducheckbox/fidu-checkbox";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const [isChecked, setisChecked] = useState(false);
@@ -44,6 +46,10 @@ export default function Home() {
       id={obj?.id}
     />
   ));
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <Header />
@@ -93,7 +99,16 @@ export default function Home() {
               </div>
             </div>
             {/* ==mockup=== */}
-            <div className="w-full px-6 lg:px-0 lg:w-5/12 flex md:justify-center lg:justify-end pb-20">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="true"
+              data-aos-anchor-placement="top-center"
+              className="w-full px-6 lg:px-0 lg:w-5/12 flex md:justify-center lg:justify-end pb-20"
+            >
               <Image
                 src="/images/mockup.svg"
                 width={140}
@@ -109,7 +124,16 @@ export default function Home() {
         {/* ============ */}
         <section className="mt-20 m-auto w-11/12 px-2 lg:px-4 mb-14">
           <div className="text-center">
-            <h2 className="text-[2.85rem] leading-[2.94rem] lg:leading-none lg:text-5xl xl:text-6xl mb-4 font-[700] text-fidu_headingColor">
+            <h2
+              data-aos="fade-up"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="true"
+              data-aos-anchor-placement="top-center"
+              className="text-[2.85rem] leading-[2.94rem] lg:leading-none lg:text-5xl xl:text-6xl mb-4 font-[700] text-fidu_headingColor"
+            >
               More than just payments
             </h2>
             <p className="w-11/12 lg:w-8/12  xl:w-7/12 m-auto text-[1.158rem] lg:text-xl  xl:text-2xl font-light text-slate-600">

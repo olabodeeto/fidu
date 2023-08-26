@@ -26,13 +26,13 @@ export default function Header() {
           <div>
             <ul className="flex gap-x-10">
               <li>
-                <Link href="/about">About us</Link>
+                <Link href="#">About us</Link>
               </li>
               <li>
                 <Link href="/contact">Contact us</Link>
               </li>
               <li>
-                <Link href="/about">FAQ&apos;s</Link>
+                <Link href="/#faq">FAQ&apos;s</Link>
               </li>
             </ul>
           </div>
@@ -76,13 +76,13 @@ export default function Header() {
           <div className="pt-20">
             <ul className="flex flex-col gap-y-10 text-center text-white font-semibold text-4xl">
               <li>
-                <Link href="/about">About us</Link>
+                <Link href="#">About us</Link>
               </li>
               <li>
                 <Link href="/contact">Contact us</Link>
               </li>
               <li>
-                <Link href="/about">FAQ&apos;s</Link>
+                <Link href="#faq">FAQ&apos;s</Link>
               </li>
             </ul>
           </div>

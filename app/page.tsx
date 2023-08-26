@@ -57,8 +57,8 @@ export default function Home() {
       <Header />
 
       <main className="">
-        <div className="w-full herobg min-h-[100vh] lg:min-h-[94vh] mt-10 lg:mt-16 lg:pt-14 xl:pt-20">
-          <div className="w-full flex flex-col lg:flex-row lg:w-11/12 m-auto mt-4 xl:mt-4 relative lg:px-2 xl:px-4 min-h-40 text-white">
+        <div className="w-full herobg min-h-[60vh] md:h-[60vh] lg:min-h-[80vh] xl::min-h-[100vh] mt-10 lg:mt-16 lg:pt-14 xl:pt-20 xl:h-[800px]">
+          <div className="w-full flex flex-col lg:flex-row lg:w-11/12 m-auto mt-4 md:h-[50vh] xl:mt-4 relative lg:px-2 xl:px-4 min-h-40 md:min-h-20 text-white">
             <div className="w-full mb-20 lg:mb-0 lg:w-7/12 px-4 md:px-10 mt-24 md:mt-32 lg:px-2 lg:mt-0">
               <h1 className="text-[2.6rem] leading-[2.88rem] md:text-5xl md:leading-[4rem] lg:text-[2.8rem] xl:text-[4rem] lg:leading-[3.4rem] xl:leading-[4.36rem] font-bold lg:mt-20">
                 Fostering trust, one transaction at a time
@@ -110,14 +110,14 @@ export default function Home() {
               data-aos-mirror="true"
               data-aos-once="true"
               data-aos-anchor-placement="top-center"
-              className="w-full px-6 lg:px-0 lg:w-5/12 flex md:justify-center lg:justify-end pb-20"
+              className="w-full h-[400px] px-6 lg:h-[480px] xl:h-[650px] lg:px-0 lg:w-5/12 flex md:justify-center lg:justify-end overflow-hidden"
             >
-              <Image
+              <img
                 src="/images/mockup.svg"
                 width={140}
                 height={140}
                 alt="Picture of the author"
-                className="w-[34rem] md:w-[28rem] lg:w-[34rem]"
+                className="w-[90rem] absolute md:w-[2rem] lg:w-[32rem]"
               />
             </div>
             {/* ===== */}
@@ -154,10 +154,13 @@ export default function Home() {
         {/* ============== */}
 
         {/* ================ */}
-        <section className="lg:-mt-10 xl:mt-10 w-full minHeight-40 relative">
-          <div className="bg-white lg:h-40 xl:minHeight-20"></div>
+        <section
+          id="faq"
+          className="lg:-mt-10 xl:pt-40 w-full minHeight-40 relative"
+        >
+          <div className="bg-white lg:h-40 xl:h-90"></div>
           <div className=" bg-fidu_black hidden lg:block lg:h-[50vh] pb-12"></div>
-          <div className="w-full absolute m-auto lg:top-14 xl:top-14">
+          <div className="w-full absolute m-auto lg:top-14 xl:top-40">
             <div className="w-11/12 md:11/12 lg:w-11/12 xl:w-10/12 m-auto p-4 bg-fidu_lightPurple rounded-2xl">
               <div className="flex flex-col lg:flex-row w-full relative bg-fidu_primary">
                 <div className="w-full py-20 md:py-10 lg:py-0 lg:h-none lg:w-[40%] flex justify-center items-center rounded-bl-xl md:rounded-bl-none rounded-br-xl md:rounded-br-none  bg-fidu_lightPurple relative lg:rounded-tr-[1rem]">

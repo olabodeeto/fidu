@@ -42,3 +42,23 @@ body {
 .herobg {
   background: url("/images/herobg.svg");
 }
+
+.progress-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #e08816;
+  transform-origin: 0%;
+}
+
+.progress-bar-m {
+  position: fixed;
+  z-index: 303000;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #e08816;
+  transform-origin: 0%;
+}

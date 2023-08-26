@@ -8,9 +8,11 @@ import Fiducheckbox from "./shared/components/Fiducheckbox/fidu-checkbox";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 
 export default function Home() {
   const [isChecked, setisChecked] = useState(false);
+  const { scrollYProgress } = useScroll();
 
   const featutes = [
     {
@@ -53,6 +55,7 @@ export default function Home() {
   return (
     <>
       <Header />
+
       <main className="">
         <div className="w-full herobg min-h-[100vh] lg:min-h-[94vh] mt-10 lg:mt-16 lg:pt-14 xl:pt-20">
           <div className="w-full flex flex-col lg:flex-row lg:w-11/12 m-auto mt-4 xl:mt-4 relative lg:px-2 xl:px-4 min-h-40 text-white">
@@ -93,7 +96,7 @@ export default function Home() {
                   className="w-11/12 py-4 md:w-10/12 bg-white md:py-2 rounded-full outline-none pl-5"
                   placeholder="Enter emaill address"
                 />
-                <button className="py-4 md:py-3 px-6 w-6/12 md:w-5/12 lg:w-5/12 xl:w-4/12 lg:bg-fidu_primary bg-fidu_black text-white rounded-full font-semibold lg:text-sm xl:text-lg xl:px-4">
+                <button className="py-4 md:py-3 px-6 w-6/12 md:w-5/12 lg:w-5/12 xl:w-4/12 bg-[#4912bb] lg:bg-fidu_primary text-white rounded-full font-semibold lg:text-sm xl:text-lg xl:px-4">
                   Join waitlist
                 </button>
               </div>

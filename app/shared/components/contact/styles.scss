@@ -47,7 +47,7 @@
     border-style: solid;
     border: linear-gradient(180deg, rgb(69, 26, 176), rgba(153, 50, 204, 0.503));
     background: #fff;
-    border-radius: 10px;
+    border-radius: 10px !important;
     min-width: 60% !important;
 
 }
@@ -76,6 +76,5 @@
     left: 4px;
     z-index: -1;
     margin: 0;
-    border-radius: inherit;
     background: #fff;
 }

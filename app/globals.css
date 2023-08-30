@@ -4,6 +4,9 @@
 
 :root {
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: #0b0812;

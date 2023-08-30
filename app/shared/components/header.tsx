@@ -11,7 +11,10 @@ export default function Header() {
   const [isModalOpen, setisModalOpen] = useState(false);
 
   const { scrollYProgress } = useScroll();
-
+  //@ts-ignore
+  document.getElementById("#faq")?.scrollIntoView({
+    behavior: "smooth",
+  });
   return (
     <>
       {/* desktop */}

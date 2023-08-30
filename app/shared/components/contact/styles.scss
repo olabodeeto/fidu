@@ -1,5 +1,6 @@
 .css-yiavyu-MuiBackdrop-root-MuiDialog-backdrop {
     background-color: rgb(7 7 7 / 70%) !important;
+    overflow: scroll !important;
 }
 
 .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
@@ -8,6 +9,15 @@
     background: #fff;
     border-radius: 10px;
     min-width: 60% !important;
+    padding: 0.88rem 0;
+
+    @media (max-width:560px) {
+        min-width: 96% !important;
+        margin: auto !important;
+        // margin-left: 0.6rem !important;
+        padding-bottom: 2rem;
+        // margin-top: 14rem !important;
+    }
 
 }
 

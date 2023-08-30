@@ -47,7 +47,7 @@ export default function ContactDialog({ open, toogle }: PropT) {
           id="draggable-dialog-title"
           className="text-center  py-4 mt-4"
         >
-          <h2 className="text-2xl lg:text-4xl text-fidu_textColor font-semibold">
+          <h2 className="text-3xl lg:text-4xl text-fidu_textColor font-semibold">
             Contact Us
           </h2>
           <p className="mt-1 font-light text-lg lg:text-base w-9/12 m-auto lg:w-full">

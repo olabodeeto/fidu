@@ -73,7 +73,7 @@ export default function ContactDialog({ open, toogle }: PropT) {
             ></textarea>
             <div className="w-full  h-12 flex justify-center items-center gap-4 mb-5 mt-8">
               <div
-                className="h-12 w-5/12 lg:w-3/12 flex justify-center items-center text-fidu_textColor font-semibold bg-gray-100 rounded-full"
+                className="h-12 w-5/12 lg:w-3/12 flex justify-center items-center text-fidu_textColor font-semibold bg-gray-100 rounded-full cursor-pointer"
                 onClick={handleClose}
               >
                 Cancel

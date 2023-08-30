@@ -4,9 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
+import ContactDialog from "./contact-us";
 
 export default function Header() {
   const [istoogle, setistoogle] = useState(false);
+  const [isModalOpen, setisModalOpen] = useState(false);
+
   const { scrollYProgress } = useScroll();
 
   return (
@@ -28,8 +31,8 @@ export default function Header() {
               <li>
                 <Link href="#">About us</Link>
               </li>
-              <li>
-                <Link href="/contact">Contact us</Link>
+              <li onClick={() => setisModalOpen(!isModalOpen)}>
+                <Link href="#">Contact us</Link>
               </li>
               <li>
                 <Link href="/#faq">FAQ&apos;s</Link>
@@ -78,8 +81,13 @@ export default function Header() {
               <li>
                 <Link href="#">About us</Link>
               </li>
-              <li>
-                <Link href="/contact">Contact us</Link>
+              <li
+                onClick={() => {
+                  setistoogle(false);
+                  setisModalOpen(!isModalOpen);
+                }}
+              >
+                <Link href="#">Contact us</Link>
               </li>
               <li>
                 <Link href="#faq">FAQ&apos;s</Link>
@@ -89,6 +97,12 @@ export default function Header() {
         </div>
       </div>
       {/* ======= */}
+
+      {isModalOpen && (
+        <div className="absolute z-50">
+          <ContactDialog open={isModalOpen} toogle={setisModalOpen} />
+        </div>
+      )}
     </>
   );
 }

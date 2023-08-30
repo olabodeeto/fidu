@@ -1,0 +1,44 @@
+.css-yiavyu-MuiBackdrop-root-MuiDialog-backdrop {
+    background-color: rgb(7 7 7 / 70%) !important;
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    border-style: solid;
+    border: linear-gradient(180deg, rgb(69, 26, 176), rgba(153, 50, 204, 0.503));
+    background: #fff;
+    border-radius: 10px;
+    min-width: 60% !important;
+    /* border-image: linear-gradient(
+    180deg,
+    rgba(67, 24, 176, 1) 31%,
+    rgba(145, 62, 179, 0.5116640406162465) 100%
+  ); */
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg,
+            rgb(69, 26, 176),
+            rgba(153, 50, 204, 0.232));
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    z-index: -1;
+    margin: 0;
+    border-radius: inherit;
+    background: #fff;
+}

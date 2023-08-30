@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
-import ContactDialog from "./contact-us";
+import ContactDialog from "./contact/contact-us";
 
 export default function Header() {
   const [istoogle, setistoogle] = useState(false);

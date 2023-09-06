@@ -7,7 +7,7 @@ export default function Spinner({ isLoading }: PropT) {
     <SpinnerCircularFixed
       thickness={200}
       color="#ffffff"
-      size={22}
+      size={26}
       enabled={isLoading}
     />
   );

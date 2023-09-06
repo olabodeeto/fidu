@@ -28,9 +28,9 @@ export default function Header() {
           </div>
           <div>
             <ul className="flex gap-x-10">
-              <li>
+              {/* <li>
                 <Link href="#">About us</Link>
-              </li>
+              </li> */}
               <li onClick={() => setisModalOpen(!isModalOpen)}>
                 <Link href="#">Contact us</Link>
               </li>
@@ -78,9 +78,9 @@ export default function Header() {
         >
           <div className="pt-20">
             <ul className="flex flex-col gap-y-10 text-center text-white font-semibold text-4xl">
-              <li>
+              {/* <li>
                 <Link href="#">About us</Link>
-              </li>
+              </li> */}
               <li
                 onClick={() => {
                   setistoogle(false);

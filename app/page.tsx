@@ -8,25 +8,32 @@ import Fiducheckbox from "./shared/components/Fiducheckbox/fidu-checkbox";
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "react-toastify/dist/ReactToastify.css";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
+import http from "./shared/lib/httpService";
+import { ToastContainer, toast } from "react-toastify";
+import Spinner from "./shared/components/Spinner";
 
 export default function Home() {
+  const [email, setemail] = useState("");
+  const [isLoading, setisLoading] = useState(false);
+
   const [isChecked, setisChecked] = useState(false);
   const { scrollYProgress } = useScroll();
 
   const featutes = [
     {
       id: 1,
-      title: "Secured Ecosystem",
+      title: "Instant Payment Link",
       description:
-        "With FIDU, a safer and secured ecosystem has been set in place for all of your transaction.",
+        "On FIDU, you can create and share payment links in a snap, fostering trusts and faster transactions between two parties",
       icon: "/icons/secure.svg",
     },
     {
       id: 2,
-      title: "Integrated Widgets",
+      title: "Faster Payment Checkout",
       description:
-        "With our integrated widgets built for you, checkouts and payments can be be more faster, and safer",
+        "With FIDU, payment checkout process is made faster and more seamless, with innovative technology to streamline payment flow",
       icon: "/icons/dash.svg",
     },
 
@@ -49,11 +56,30 @@ export default function Home() {
     />
   ));
 
+  const handleSub = async (e: any) => {
+    e.preventDefault();
+    setisLoading(true);
+    const payload = { email };
+    try {
+      const resp: any = await http.post("/api/earlybirds", payload);
+      if (resp.status) {
+        toast.success(resp?.message);
+        setemail("");
+      } else {
+      }
+    } catch (error) {
+      setisLoading(false);
+    } finally {
+      setisLoading(false);
+    }
+  };
+
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <>
+      <ToastContainer hideProgressBar autoClose={4000} />
       <Header />
 
       <main className="">
@@ -90,16 +116,22 @@ export default function Home() {
                   and services
                 </p>
               </div>
-              <div className="mt-4 lg:mt-10 w-full md:w-8/12 lg:w-10/12 p-2 rounded-full flex flex-col gap-y-4 md:flex-row items-start lg:justify-between lg:items-center gap-x-2 md:bg-white text-fidu_textColor lg:focus-within:outline-none lg:focus-within:ring-4 focus-with:ring-offset-1 focus-within:ring-primary lg:ring-fidu_primary">
+              <form
+                className="mt-4 lg:mt-10 w-full md:w-8/12 lg:w-10/12 p-2 rounded-full flex flex-col gap-y-4 md:flex-row items-start lg:justify-between lg:items-center gap-x-2 md:bg-white text-fidu_textColor lg:focus-within:outline-none lg:focus-within:ring-4 focus-with:ring-offset-1 focus-within:ring-primary lg:ring-fidu_primary"
+                onSubmit={handleSub}
+              >
                 <input
+                  value={email}
                   type="email"
                   className="w-11/12 py-4 md:w-10/12 bg-white md:py-2 rounded-full outline-none pl-5"
+                  required
                   placeholder="Enter emaill address"
+                  onChange={(e: any) => setemail(e.target.value)}
                 />
-                <button className="py-4 md:py-3 px-6 w-6/12 md:w-5/12 lg:w-5/12 xl:w-4/12 bg-[#4912bb] lg:bg-fidu_primary text-white rounded-full font-semibold lg:text-sm xl:text-lg xl:px-4">
-                  Join waitlist
+                <button className="py-4 flex justify-center items-center md:py-3 px-6 w-6/12 md:w-5/12 lg:w-5/12 xl:w-4/12 bg-[#4912bb] lg:bg-fidu_primary text-white rounded-full font-semibold lg:text-sm xl:text-lg xl:px-4">
+                  {isLoading ? <Spinner isLoading={true} /> : "Join waitlist"}
                 </button>
-              </div>
+              </form>
             </div>
             {/* ==mockup=== */}
             <div

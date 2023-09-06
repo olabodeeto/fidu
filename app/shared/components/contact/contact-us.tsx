@@ -60,17 +60,17 @@ export default function ContactDialog({ open, toogle }: PropT) {
               <input
                 placeholder="Full Name"
                 type="text"
-                className="w-full h-14 rounded-md bg-gray-50 px-4 outline-none border border-gray-100 focus:border-fidu_primary placeholder:text-fidu_textColor"
+                className="w-full h-14 rounded-md bg-gray-50 px-4 outline-none border border-gray-100 focus:border-fidu_primary placeholder:text-gray-400"
               />
               <input
                 placeholder="Email Address"
                 type="email"
-                className="w-full h-14 rounded-md bg-gray-50 px-4 outline-none border border-gray-100 focus:border-fidu_primary placeholder:text-fidu_textColor"
+                className="w-full h-14 rounded-md bg-gray-50 px-4 outline-none border border-gray-100 focus:border-fidu_primary placeholder:text-gray-400"
               />
             </div>
             <textarea
               placeholder="Your message here"
-              className="w-full lg:mt-10 h-32 py-4 rounded-md bg-gray-50 px-4 outline-none border border-gray-100 focus:border-fidu_primary placeholder:text-fidu_textColor mt-4"
+              className="w-full lg:mt-10 h-32 py-4 rounded-md bg-gray-50 px-4 outline-none border border-gray-100 focus:border-fidu_primary placeholder:text-gray-400 mt-4"
             ></textarea>
             <div className="w-full  h-12 flex flex-col-reverse lg:flex-row justify-center items-center gap-4 mb-5 mt-12 lg:mt-8">
               <div

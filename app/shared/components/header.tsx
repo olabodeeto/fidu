@@ -34,9 +34,9 @@ export default function Header() {
               <li onClick={() => setisModalOpen(!isModalOpen)}>
                 <Link href="#">Contact us</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/#faq">FAQ&apos;s</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -89,9 +89,9 @@ export default function Header() {
               >
                 <Link href="#">Contact us</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#faq">FAQ&apos;s</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

@@ -7,6 +7,7 @@ import FaqComponent from "./shared/components/faq-component";
 import Fiducheckbox from "./shared/components/Fiducheckbox/fidu-checkbox";
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import Marquee from "react-fast-marquee";
 import "aos/dist/aos.css";
 import "react-toastify/dist/ReactToastify.css";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
@@ -186,7 +187,7 @@ export default function Home() {
         {/* ============== */}
 
         {/* ================ */}
-        <section
+        {/* <section
           id="faq"
           className="lg:-mt-10 xl:pt-40 w-full minHeight-40 relative"
         >
@@ -206,16 +207,50 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         {/* ================== */}
+
+        {/* =============== */}
+        <section className="py-5 bg-[#EBE2FC] pb-20 px-4">
+          <div className="mt-4">
+            <Marquee>
+              <h2 className="text-[6rem] font-extrabold tracking-[2rem] text-[#DED0F9] mr-14">
+                myFidu
+              </h2>
+              <h2 className="text-[6rem] font-extrabold tracking-[2rem] text-[#DED0F9] mr-14">
+                myFidu
+              </h2>
+              <h2 className="text-[6rem] font-extrabold tracking-[2rem] text-[#DED0F9] mr-14">
+                myFidu
+              </h2>
+            </Marquee>
+          </div>
+
+          <div>
+            <p className="w-full md:w-6/12 m-auto text-center text-xl md;text-2xl lg:text-3xl mb-8">
+              Empower individuals and businesses to transact confidently in an
+              ever-evolving digital economy.
+            </p>
+            <div className="lg:w-9/12 m-auto">
+              <Image
+                src="./images/art.svg"
+                alt=""
+                width={400}
+                height={250}
+                className="w-full"
+              />
+            </div>
+          </div>
+        </section>
+        {/* =============== */}
       </main>
-      <footer className=" bg-fidu_black h-[45rem] lg:h-[16rem] text-white md:p-8 relative -z-10 w-full">
-        <div className="w-full absolute bottom-0 left-0 mt-10">
-          <div className="w-11/12 px-4 m-auto py-10 flex items-center flex-col-reverse lg:flex-row justify-between gap-y-10">
+      <footer className="border-t-4 border-t-fidu_lightPurple bg-fidu_textColor p-0 py-8">
+        <div className="w-full">
+          <div className="w-full px-4 m-auto flex items-center flex-col-reverse lg:flex-row justify-between gap-y-10">
             <h3 className="text-[#928e99] font-light text-sm lg:text-lg xl::text-xl">
               ©2023 Fidu Technologies. All Rights Reserved
             </h3>
-            <div className="mb-4 flex gap-x-10 mt-1">
+            <div className=" flex gap-x-10">
               <div>
                 <Image
                   src="/icons/instagram.svg"

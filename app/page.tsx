@@ -252,16 +252,17 @@ export default function Home() {
             </h3>
             <div className=" flex gap-x-10">
               <div>
-                <Image
-                  src="/icons/instagram.svg"
-                  width={8}
-                  height={8}
-                  alt="secure"
-                  className="w-6"
-                />
+                <a href=" https://instagram.com/myfidu" target="_blank">
+                  <Image
+                    src="/icons/instagram.svg"
+                    width={8}
+                    height={8}
+                    alt="secure"
+                    className="w-6"
+                  />
+                </a>
               </div>
-
-              <div>
+              {/* <div>
                 <Image
                   src="/icons/facebook.svg"
                   width={8}
@@ -269,26 +270,31 @@ export default function Home() {
                   alt="secure"
                   className="w-6"
                 />
-              </div>
-
+              </div> */}
               <div>
-                <Image
-                  src="/icons/linkedin.svg"
-                  width={8}
-                  height={8}
-                  alt="secure"
-                  className="w-6"
-                />
+                <a
+                  href="https://www.linkedin.com/company/myfidu/"
+                  target="_blank"
+                >
+                  <Image
+                    src="/icons/linkedin.svg"
+                    width={8}
+                    height={8}
+                    alt="secure"
+                    className="w-6"
+                  />
+                </a>
               </div>
-
               <div>
-                <Image
-                  src="/icons/twitter.svg"
-                  width={8}
-                  height={8}
-                  alt="secure"
-                  className="w-6"
-                />
+                <a href="https://twitter.com/myfidu" target="_blank">
+                  <Image
+                    src="/icons/twitter.svg"
+                    width={8}
+                    height={8}
+                    alt="secure"
+                    className="w-6"
+                  />
+                </a>
               </div>
             </div>
           </div>

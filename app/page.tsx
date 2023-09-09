@@ -211,23 +211,23 @@ export default function Home() {
         {/* ================== */}
 
         {/* =============== */}
-        <section className="py-5 bg-[#EBE2FC] pb-20 px-4">
-          <div className="mt-4">
+        <section className="py-5 bg-[#F7F5FF] pb-20 px-4">
+          <div className="mt-4 mb-8">
             <Marquee>
-              <h2 className="text-[6rem] font-extrabold tracking-[2rem] text-[#DED0F9] mr-14">
+              <h2 className="text-[10rem] font-extrabold tracking-[2rem] text-[#EBE2FC] mr-14">
                 myFidu
               </h2>
-              <h2 className="text-[6rem] font-extrabold tracking-[2rem] text-[#DED0F9] mr-14">
+              <h2 className="text-[10rem] font-extrabold tracking-[2rem] text-[#EBE2FC] mr-14">
                 myFidu
               </h2>
-              <h2 className="text-[6rem] font-extrabold tracking-[2rem] text-[#DED0F9] mr-14">
+              <h2 className="text-[10rem] font-extrabold tracking-[2rem] text-[#EBE2FC] mr-14">
                 myFidu
               </h2>
             </Marquee>
           </div>
 
           <div>
-            <p className="w-full md:w-6/12 m-auto text-center text-xl md;text-2xl lg:text-3xl mb-8">
+            <p className="w-full md:w-7/12 m-auto text-center text-xl md:text-2xl lg:text-3xl mb-8">
               Empower individuals and businesses to transact confidently in an
               ever-evolving digital economy.
             </p>

@@ -8,6 +8,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Paper, { PaperProps } from "@mui/material/Paper";
 import Draggable from "react-draggable";
 import "./styles.scss";
+import { toast } from "react-toastify";
 
 function PaperComponent(props: PaperProps) {
   return (
@@ -33,6 +34,12 @@ export default function ContactDialog({ open, toogle }: PropT) {
     toogle(false);
   };
 
+  const handleContact = async (e: any) => {
+    e.preventDefault();
+    toast.info("Thanks for reaching out, we will respond shortly");
+    toogle(false);
+  };
+
   return (
     <div>
       <Dialog
@@ -55,22 +62,25 @@ export default function ContactDialog({ open, toogle }: PropT) {
           </p>
         </DialogTitle>
         <DialogContent>
-          <form className="w-full mt-5">
+          <form className="w-full mt-5" onSubmit={handleContact}>
             <div className="w-full flex flex-col lg:flex-row gap-y-5 items-center gap-4">
               <input
                 placeholder="Full Name"
                 type="text"
                 className="w-full h-14 rounded-md bg-gray-50 px-4 outline-none border border-gray-100 focus:border-fidu_primary placeholder:text-gray-400"
+                required
               />
               <input
                 placeholder="Email Address"
                 type="email"
                 className="w-full h-14 rounded-md bg-gray-50 px-4 outline-none border border-gray-100 focus:border-fidu_primary placeholder:text-gray-400"
+                required
               />
             </div>
             <textarea
               placeholder="Your message here"
               className="w-full lg:mt-10 h-32 py-4 rounded-md bg-gray-50 px-4 outline-none border border-gray-100 focus:border-fidu_primary placeholder:text-gray-400 mt-4"
+              required
             ></textarea>
             <div className="w-full  h-12 flex flex-col-reverse lg:flex-row justify-center items-center gap-4 mb-5 mt-12 lg:mt-8">
               <div
@@ -79,10 +89,7 @@ export default function ContactDialog({ open, toogle }: PropT) {
               >
                 Cancel
               </div>
-              <button
-                className="py-4 lg:h-12 w-full lg:w-3/12 flex justify-center items-center text-white font-semibold bg-fidu_primary rounded-md"
-                onClick={handleClose}
-              >
+              <button className="py-4 lg:h-12 w-full lg:w-3/12 flex justify-center items-center text-white font-semibold bg-fidu_primary rounded-md">
                 Send
               </button>
             </div>

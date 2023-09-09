@@ -5,7 +5,8 @@ import { Radio } from "@mui/material";
 import FeatureCard from "./shared/components/home-feature-card";
 import FaqComponent from "./shared/components/faq-component";
 import Fiducheckbox from "./shared/components/Fiducheckbox/fidu-checkbox";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Talk from "talkjs";
 import AOS from "aos";
 import Marquee from "react-fast-marquee";
 import "aos/dist/aos.css";
@@ -21,6 +22,8 @@ export default function Home() {
 
   const [isChecked, setisChecked] = useState(false);
   const { scrollYProgress } = useScroll();
+
+  const chatboxEl: any = useRef();
 
   const featutes = [
     {
@@ -78,6 +81,7 @@ export default function Home() {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <>
       <ToastContainer hideProgressBar autoClose={4000} />
@@ -300,6 +304,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <div ref={chatboxEl} />
     </>
   );
 }

@@ -15,10 +15,12 @@ import { AnimatePresence, motion, useScroll } from "framer-motion";
 import http from "./shared/lib/httpService";
 import { ToastContainer, toast } from "react-toastify";
 import Spinner from "./shared/components/Spinner";
+import CongratDialog from "./shared/components/congrats/congrat";
 
 export default function Home() {
   const [email, setemail] = useState("");
   const [isLoading, setisLoading] = useState(false);
+  const [isModalOpen, setisModalOpen] = useState(false);
 
   const [isChecked, setisChecked] = useState(false);
   const { scrollYProgress } = useScroll();
@@ -63,11 +65,13 @@ export default function Home() {
   const handleSub = async (e: any) => {
     e.preventDefault();
     setisLoading(true);
+
     const payload = { email };
     try {
       const resp: any = await http.post("/api/earlybirds", payload);
       if (resp.status) {
-        toast.success(resp?.message);
+        // toast.success(resp?.message);
+        setisModalOpen(true);
         setemail("");
       } else {
       }
@@ -305,6 +309,12 @@ export default function Home() {
         </div>
       </footer>
       <div ref={chatboxEl} />
+
+      {isModalOpen && (
+        <div className="absolute z-50">
+          <CongratDialog open={isModalOpen} toogle={setisModalOpen} />
+        </div>
+      )}
     </>
   );
 }

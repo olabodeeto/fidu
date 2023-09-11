@@ -1,0 +1,102 @@
+.css-yiavyu-MuiBackdrop-root-MuiDialog-backdrop {
+    background-color: rgb(7 7 7 / 70%) !important;
+    overflow: scroll !important;
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    border-style: solid;
+    border: linear-gradient(180deg, rgb(69, 26, 176), rgba(153, 50, 204, 0.503));
+    background: #fff;
+    border-radius: 10px !important;
+    min-width: 60% !important;
+    padding: 0.88rem 0;
+
+    @media (max-width:560px) {
+        min-width: 96% !important;
+        margin: auto !important;
+        // margin-left: 0.6rem !important;
+        padding-bottom: 2rem;
+        // margin-top: 14rem !important;
+    }
+
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: 0;
+    border-radius: 10px !important;
+    background: linear-gradient(180deg,
+            rgb(69, 26, 176),
+            rgba(153, 50, 204, 0.232));
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    z-index: -1;
+    margin: 0;
+
+    background: #fff;
+}
+
+
+
+
+
+
+.css-uhb5lp {
+    border-style: solid;
+    border: linear-gradient(180deg, rgb(69, 26, 176), rgba(153, 50, 204, 0.503));
+    background: #fff;
+    border-radius: 10px !important;
+    min-width: 60% !important;
+    padding: 1rem 0;
+
+    @media (max-width:560px) {
+        min-width: 96% !important;
+        margin: auto !important;
+        padding: 1rem 0;
+        padding-top: 1rem;
+
+
+    }
+
+}
+
+.css-uhb5lp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: 0;
+    border-radius: 10px !important;
+    background: linear-gradient(180deg,
+            rgb(69, 26, 176),
+            rgba(153, 50, 204, 0.232));
+}
+
+.css-uhb5lp::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    z-index: -1;
+    margin: 0;
+    border-radius: 10px !important;
+    background: #fff;
+}
